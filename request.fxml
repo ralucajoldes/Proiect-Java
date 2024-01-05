@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #a0e1e1; -fx-border-color: #a0e1e1;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.RequestController">
+    <center>
+        <VBox alignment="CENTER" fillWidth="false" layoutY="60.0" prefHeight="339.0" prefWidth="158.0" spacing="10.0" style="-fx-background-color: #a0e1e1; -fx-border-color: #a0e1e1;">
+            <TableView fx:id="tableView" blendMode="OVERLAY" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="800.0">
+                <columns>
+                    <TableColumn fx:id="tableColumnTo" prefWidth="200.0" style="-fx-font-family:'Century Gothic'" text="To" />
+                    <TableColumn fx:id="tableColumnFrom" prefWidth="200.0" style="-fx-font-family:'Century Gothic'" text="From" />
+                    <TableColumn fx:id="tableColumnDate" prefWidth="200.0" style="-fx-font-family:'Century Gothic'" text="Date" />
+                    <TableColumn fx:id="tableColumnStatus" prefWidth="200.0" style="-fx-font-family:'Century Gothic'" text="Status" />
+                </columns>
+            </TableView>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="147.0" spacing="7.0">
+                <children>
+                    <Button fx:id="previousPage" mnemonicParsing="false" onAction="#go_previous" prefHeight="22.0" prefWidth="36.0" style="-fx-background-color: #c2eed0; -fx-background-radius: 15;" text="&lt;&lt;" textFill="#20344a"/>
+                    <Label fx:id="pageLabel" text="1" textFill="#20344a"/>
+                    <Button fx:id="nextPage" mnemonicParsing="false" onAction="#go_next" prefHeight="22.0" prefWidth="36.0" style="-fx-background-color: #c2eed0; -fx-background-radius: 15;" text="&gt;&gt;" textFill="#20344a">
+                        <font>
+                            <Font name="Century Gothic" size="12.0" />
+                        </font>
+                    </Button>
+                </children>
+            </HBox>
+            <ChoiceBox fx:id="choice_request" style="-fx-background-color: #a0e1ad;-fx-text-fill: #20344a;" value="PENDING">
+                <items>
+                <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="ACCEPT" />
+                        <String fx:value="PENDING" />
+                        <String fx:value="REJECT" />
+                        <String fx:value="CANCELED" />
+                </FXCollections>
+                </items>
+                <effect>
+                    <Glow />
+                </effect>
+            </ChoiceBox>
+         <Button mnemonicParsing="false" onAction="#friend_request" style="-fx-background-color: #a0e1ad; -fx-background-radius: 15;" text="OK" textFill="#20344a">
+            <font>
+               <Font name="Century Gothic Bold" size="13.0" />
+            </font>
+             <effect>
+                 <Glow />
+             </effect>
+         </Button>
+        </VBox>
+    </center>
+</BorderPane>

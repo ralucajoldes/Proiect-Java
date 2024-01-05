@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color:  #a0e1e1;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.InboxController">
+    <center>
+        <VBox alignment="CENTER" fillWidth="false" layoutY="60.0" prefHeight="408.0" prefWidth="4000.0" spacing="10.0" style="-fx-spacing: 5;">
+         <TextField fx:id="searchField" alignment="CENTER" promptText="Search" style="-fx-background-radius: 15;">
+            <font>
+               <Font name="Century Gothic" size="12.0" />
+            </font>
+         </TextField>
+            <TableView fx:id="tableView" blendMode="OVERLAY" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+                <columns>
+                    <TableColumn fx:id="tableColumnMessage" prefWidth="150.0" style="-fx-font-family:'Century Gothic'" text="Message" />
+                    <TableColumn fx:id="tableColumnFrom" prefWidth="150.0" style="-fx-font-family:'Century Gothic'" text="From" />
+                    <TableColumn fx:id="tableColumnTo" prefWidth="150.0" style="-fx-font-family:'Century Gothic'" text="To" />
+                    <TableColumn fx:id="tableColumnDate" prefWidth="150.0" style="-fx-font-family:'Century Gothic'" text="Date" />
+
+                </columns>
+
+            </TableView>
+            <HBox alignment="CENTER" prefHeight="31.0" prefWidth="137.0" spacing="7.0">
+                <children>
+                    <Button fx:id="previousPage" mnemonicParsing="false" onAction="#go_previous" prefHeight="22.0" prefWidth="36.0" style="-fx-background-color: #c2eed0; -fx-background-radius: 15;" text="&lt;&lt;" textFill="#20344a"/>
+                    <Label fx:id="pageLabel" text="1" textFill="#20344a"/>
+                    <Button fx:id="nextPage" mnemonicParsing="false" onAction="#go_next" prefHeight="22.0" prefWidth="36.0" style="-fx-background-color: #c2eed0; -fx-background-radius: 15;" text="&gt;&gt;" textFill="#20344a">
+                  <font>
+                     <Font name="Century Gothic" size="12.0" />
+                  </font></Button>
+                </children>
+            </HBox>
+         <TextField fx:id="tField" alignment="CENTER" prefHeight="42.0" prefWidth="377.0" promptText="Your message" style="-fx-background-radius: 15;">
+            <font>
+               <Font name="Segoe UI Light" size="12.0" />
+            </font>
+         </TextField>
+            <Button mnemonicParsing="false" onAction="#send_message" prefHeight="21.0" prefWidth="87.0" style="-fx-background-color: #a0e1ad; -fx-background-radius: 15;" text="REPLY" textAlignment="CENTER" textFill="#20344a">
+                <font>
+                    <Font name="Segoe UI Light" size="13.0" />
+                </font>
+                <effect>
+                    <Glow />
+                </effect>
+            </Button>
+        </VBox>
+    </center>
+</BorderPane>

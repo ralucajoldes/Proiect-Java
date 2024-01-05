@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #a0e1e1;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="socialnetwork.controller.LoggedInController">
+   <center>
+      <SplitPane fx:id="splitPane" dividerPositions="0.82305764411027568" prefHeight="400.0" prefWidth="800.0" style="-fx-background-color: #a0e1e1;" stylesheets="@splitStyle.css" BorderPane.alignment="CENTER">
+        <items>
+
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1000.0" prefWidth="300.0" style="-fx-background-color: #a0e1e1;">
+               <children>
+                  <TabPane fx:id="tPane" layoutY="-1.0" prefHeight="1000.0" prefWidth="700.0" style="-fx-background-color: #a0e1e1; -fx-border-color: #a0e1e1;" styleClass="floating" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+                    <tabs>
+                      <Tab fx:id="friendsTab" style="-fx-background-color: #06a9af; -fx-font-family: 'Arial Black';" text="Your friends" />
+                      <Tab fx:id="newFriendsTab" style="-fx-background-color: #06a9af; -fx-font-family: 'Arial Black';" text="Add new friend" />
+                      <Tab fx:id="requestsTab" style="-fx-background-color: #06a9af; -fx-font-family: 'Arial Black';" text="Friend requests" />
+                        <Tab fx:id="inboxTab" style="-fx-background-color: #06a9af; -fx-font-family: 'Arial Black';" text="Inbox" />
+                        <Tab fx:id="composeTab" style="-fx-background-color: #06a9af; -fx-font-family: 'Arial Black';" text="Write message" />
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                <children>
+                    <VBox alignment="CENTER_LEFT" layoutX="-4.0" layoutY="-2.0" prefHeight="400.0" prefWidth="178.0" spacing="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                        <children>
+                            <ImageView fx:id="img" fitHeight="245.0" fitWidth="245.0" pickOnBounds="true"  >
+                                <VBox.margin>
+                                    <Insets right="10.0" />
+                                </VBox.margin></ImageView>
+                            <Label fx:id="labelUsername" alignment="CENTER" contentDisplay="CENTER" style="-fx-alignment: center;">
+                                <VBox.margin>
+                                    <Insets right="10.0" />
+                                </VBox.margin>
+                            </Label>
+                            <Label fx:id="labelFullName" style="-fx-alignment: center;">
+                                <VBox.margin>
+                                    <Insets right="10.0" />
+                                </VBox.margin>
+                            </Label>
+                            <Label fx:id="labelFriends" style="-fx-alignment: center;">
+                                <VBox.margin>
+                                    <Insets right="10.0" />
+                                </VBox.margin>
+                            </Label>
+                            <Button fx:id="changePicture" alignment="CENTER" contentDisplay="CENTER" layoutX="25.0" layoutY="227.0" mnemonicParsing="false" onAction="#change_picture" prefHeight="30.0" prefWidth="280.0" style="-fx-background-color: #06a9af; -fx-background-radius: 15;" text="Change picture" textFill="#0a0112">
+                                <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                </font>
+                                <effect>
+                                    <Glow />
+                                </effect>
+                                <VBox.margin>
+                                    <Insets right="10.0" />
+                                </VBox.margin>
+                            </Button>
+                            <Button fx:id="LogOutButton" mnemonicParsing="false" onAction="#log_out" prefHeight="30.0" prefWidth="280.0" style="-fx-background-color: #06a9af; -fx-background-radius: 15;" text="Sign Out" textFill="#0a0112">
+                                <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                </font>
+                                <effect>
+                                    <Glow />
+                                </effect>
+                                <VBox.margin>
+                                    <Insets right="10.0" />
+                                </VBox.margin>
+                            </Button>
+
+                            <Button fx:id="deleteAccountButton" alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="164.0" mnemonicParsing="false" onAction="#delete_account" prefHeight="30.0" prefWidth="280.0" style="-fx-background-color: #06a9af; -fx-background-radius: 15;" text="Delete account" textFill="#0a0112">
+                                <font>
+                                    <Font name="Arial Black" size="14.0" />
+                                </font>
+                                <effect>
+                                    <Glow />
+                                </effect>
+                                <VBox.margin>
+                                    <Insets right="10.0" />
+                                </VBox.margin>
+                            </Button>
+                        </children>
+                        <padding>
+                            <Insets right="5.0" />
+                        </padding>
+                    </VBox>
+                </children>
+            </AnchorPane>
+        </items>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </SplitPane>
+   </center>
+</BorderPane>
